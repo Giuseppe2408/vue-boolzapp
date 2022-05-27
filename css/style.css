@@ -1,0 +1,36 @@
+#app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+/* bck */
+.bck-green {
+    background-color: green;
+    height: 25vh;
+    
+}
+.bck-grey {
+    background-color: grey;
+    height: 75vh;
+}
+.bck-white {
+    background-color: white;
+    height: 90vh;
+    
+}
+
+.stile-riga {
+    background-color: lightgrey;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.icon {
+    color: grey;
+    font-size: 22px;
+    margin-left: 20px;
+}
