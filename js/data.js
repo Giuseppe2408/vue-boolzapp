@@ -6,6 +6,7 @@ const myContacts = new Vue({
             {
                 name: 'Michele',
                 avatar: '_1',
+                src: 'https://www.bonifica-auto.it/wp-content/uploads/2019/10/avatar-uomo.jpg',
                 visible: true,
                 messages: [
                     {
@@ -28,6 +29,7 @@ const myContacts = new Vue({
             {
                 name: 'Fabio',
                 avatar: '_2',
+                src: 'img/Fabio.jpg',
                 visible: true,
                 messages: [
                     {
@@ -50,6 +52,7 @@ const myContacts = new Vue({
             {
                 name: 'Samuele',
                 avatar: '_3',
+                src: 'img/samuele.jpg',
                 visible: true,
                 messages: [
                     {
@@ -71,6 +74,7 @@ const myContacts = new Vue({
             },
             {
                 name: 'Alessandro B.',
+                src: 'img/alessandro1.jpg',
                 avatar: '_4',
                 visible: true,
                 messages: [
@@ -88,6 +92,7 @@ const myContacts = new Vue({
             },
             {
                 name: 'Alessandro L.',
+                src: 'img/alessandro2.png',
                 avatar: '_5',
                 visible: true,
                 messages: [
@@ -105,6 +110,7 @@ const myContacts = new Vue({
             },
             {
                 name: 'Claudia',
+                src: 'img/claudia.png',
                 avatar: '_6',
                 visible: true,
                 messages: [
@@ -127,6 +133,7 @@ const myContacts = new Vue({
             },
             {
                 name: 'Federico',
+                src: 'img/gigachad-1200x1200.jpg',
                 avatar: '_7',
                 visible: true,
                 messages: [
@@ -144,6 +151,7 @@ const myContacts = new Vue({
             },
             {
                 name: 'Davide',
+                src: 'img/davide.jpg',
                 avatar: '_8',
                 visible: true,
                 messages: [
@@ -171,4 +179,3 @@ const myContacts = new Vue({
  
  
 
-console.log(contacts);

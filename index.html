@@ -18,6 +18,7 @@
         <div class="container bck-white">
             <div class="row">
                 <div class="col-4">
+                    <!-- lato sinistro -->
                     <div class="row stile-riga justify-content-between">
                         <div class="col-5">
                             <img class="avatar" src="img/woman-avatar.png" alt="">
@@ -29,40 +30,93 @@
                             <i class="fa-solid icon fa-ellipsis-vertical"></i>
                         </div>
                     </div>
+
                     <!-- attivo disattivo notifiche -->
                     <div class="row bck-azure">
-                        <div class="col-2">
-                            <i class="fa-solid fa-bell-slash"></i>
+                        <div class="col-2 align-self-center">
+                            <i id="bell" class="fa-solid fa-bell-slash"></i>
                         </div>
                         <div class="col-7">
                             <h3>Ricevi notifiche</h3>
                             <a class="clr-grey" href="">attiva notifiche desktop</a>
                         </div>
                     </div>
+
                     <!-- input ricerca messaggio -->
-                    <div class="row mt-2">
+                    <div class="row">
                         <button class="col-3">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                         <input type="text" class="col-9" placeholder="Cerca o inizia una nuova chat">
                     </div>
+
+                    <!-- lista contatti -->
+                    <div class="row" id="contatti">
+                        <div class="col-12" v-for="(item,i) in contacts" :key="i">
+                            <div class="row contatti">
+                                <div class="col-2">
+                                    <img :src="item.src" class="avatar" 
+                                    alt="">
+                                </div>
+                                <div class="col-8 align-self-center">
+                                    <h4>{{item.name}}</h4>
+                                    <span class="clr-grey">Ultimo messaggio</span>
+                                </div>
+                                <div class="col-1">
+                                    <span class="clr-grey">12:00</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
+                <!-- parte dei messaggi -->
                 <div class="col-8">
                     <div class="row stile-riga">
                         <div class="col-1 align-self-center">
                             <img src="https://www.bonifica-auto.it/wp-content/uploads/2019/10/avatar-uomo.jpg" class="avatar" 
                             alt="">          
                         </div>
-                        <div class="col-4 align-self-center">
+                        <div class="col-6 align-self-center">
                             <h5>Michele</h5>
                             <span class="clr-grey">ultimo accesso oggi alle 12:00</span>
                         </div>
-                        <div class="col-4 justify-self-end align-self-center">
+                        <div class="col-5 justify-self-end align-self-center">
                             <i class="fa-solid icon fa-magnifying-glass"></i>
                             <i class="fa-solid icon fa-paperclip"></i>
                             <i class="fa-solid icon fa-ellipsis-vertical"></i>
                         </div>
                     </div>
+                    <!-- messaggi -->
+                    <div class="row" id="messaggi">
+                        <div class="col-12">
+                            <div class="row flex-column">
+                                <!-- messaggi inviati -->
+                                <div class="col-7 style-msg align-self-end m-2 bck-green">
+                                    <span>Hai portato a spasso il cane?</span>
+                                </div>
+                                <div class="col-7 style-msg m-2 align-self-end bck-green">Ricordati di stendere i panni</div>
+                                <!-- messaggi ricevuti -->
+                                <div class="col-7 style-msg m-2 align-self-start bck-white">Tutto fatto!</div>
+                            </div>
+                        </div>
+                        <div class="col-12 align-self-end">
+                            <div class="row bck-grey py-2 justify-content-around align-items-center">
+                                <div class="col-1">
+                                    <i class="fa-solid icon fa-face-smile"></i>
+                                </div>
+                                <div class="col-9">
+                                    <input id="write-msg" type="text" placeholder="Scrivi un messaggio">
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa-solid icon fa-microphone"></i>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    
                 </div>
             </div>
         </div>

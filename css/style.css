@@ -5,27 +5,30 @@
 }
 /* bck */
 .bck-green {
-    background-color: green;
-    height: 25vh;
-    
+    background-color: green; 
 }
+
 .bck-grey {
-    background-color: grey;
-    height: 75vh;
+    background-color: lightgrey;
 }
+
 .bck-white {
     background-color: white;
-    height: 90vh;
 }
 
 .bck-azure {
-    background-color: azure;
+    padding: 5px;
+    background-color: rgb(101, 202, 202);
 }
+
+
 /* colori testo */
 .clr-grey {
     color: grey;
 }
 
+
+/* parte di sopra */
 .stile-riga {
     background-color: lightgrey;
     border-right: 1px solid black;
@@ -41,4 +44,39 @@
     color: grey;
     font-size: 22px;
     margin-left: 20px;
+}
+
+#bell {
+    font-size: 30px;
+    color: rgb(101, 202, 202);
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+/* lista contatti */
+#contatti {
+    height: calc(100% - 180px);
+    overflow-y: scroll;
+}
+.contatti {
+    border-top: 1px solid grey;
+    padding: 5px 0;
+    
+}
+
+/* messaggi */
+#messaggi {
+    height: calc(100% - 70px);
+    background-image: url('../img/sfondo.jpg');
+    background-size: contain;
+    overflow-y: scroll;
+}
+
+.style-msg {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#write-msg {
+    width: 100%;
 }
