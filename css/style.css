@@ -16,11 +16,19 @@
 .bck-white {
     background-color: white;
     height: 90vh;
-    
+}
+
+.bck-azure {
+    background-color: azure;
+}
+/* colori testo */
+.clr-grey {
+    color: grey;
 }
 
 .stile-riga {
     background-color: lightgrey;
+    border-right: 1px solid black;
 }
 
 .avatar {
