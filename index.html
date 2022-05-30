@@ -79,11 +79,11 @@
                 <div class="col-8">
                     <div class="row stile-riga">
                         <div class="col-1 align-self-center">
-                            <img src="https://www.bonifica-auto.it/wp-content/uploads/2019/10/avatar-uomo.jpg" class="avatar" 
+                            <img  class="avatar" 
                             alt="">          
                         </div>
                         <div class="col-6 align-self-center">
-                            <h5>Michele</h5>
+                            <!-- <h5>{{item[activeContacts].name}}</h5> -->
                             <span class="clr-grey">ultimo accesso oggi alle 12:00</span>
                         </div>
                         <div class="col-5 justify-self-end align-self-center">
@@ -97,15 +97,10 @@
                         <div class="col-12">
                             <div class="row flex-column">
                                 <!-- messaggi v-for -->
-                                <div class="col-12 m-2 dis-flex" v-for="(item, i) in contacts">
-                                    <div v-for="messaggi in item.messages"
-                                    class="style-msg"
-                                    :class="messaggi.status === 'sent' ? 'sent' : 'received'"
-                                    :key="i">
-                                        <span>{{messaggi.message}}</span>
-                                        <span class="time">{{messaggi.date}}</span>
-                                    </div>
-                                    
+                                <div class="col-7 m-2 style-msg dis-flex" v-for="(item, i) in contacts[activeContacts].messages" :class="item.status === 'sent' ? 'sent' : 'received'">                            
+                                        <span class="messaggio">{{item.message}}</span>
+                                        <span class="time align-self-end">{{item.date}}</span>
+                                   
                                 </div>
                                 <!-- <div class="col-7 style-msg m-2 align-self-end bck-green dis-flex">
                                     <span>Ricordati di stendere i panni</span>

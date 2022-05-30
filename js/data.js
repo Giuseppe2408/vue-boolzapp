@@ -173,15 +173,19 @@ const myContacts = new Vue({
                     }
                 ],
             }
-        ]
+        ],
     },
+    
     methods : {
         switchContacts(activeContacts) {
+            this.activesContacts++;
             this.activeContacts = activeContacts;
+            console.log(activeContacts);
         }
     }
 }); 
  
+
  
  
 
