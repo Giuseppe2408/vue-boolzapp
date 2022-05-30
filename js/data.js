@@ -184,16 +184,19 @@ const myContacts = new Vue({
             console.log(activeContacts);
         },
 
+        
+
         newMessage(){
             const newMsg = {
                 date : '30/05/2022 15:48',
                 message : this.newMsg,
                 status : 'sent',
             }
-            if (this.newMsg !== "") {
-                this.contacts.messages.push(newMsg);
+            if (this.newMsg !== "") {                
+                this.contacts[this.activeContacts].messages.push(newMsg);
                 this.newMsg = "";
             }      
+            
         }
     }
 }); 
