@@ -79,11 +79,11 @@
                 <div class="col-8">
                     <div class="row stile-riga">
                         <div class="col-1 align-self-center">
-                            <img  class="avatar" 
+                            <img :src="contacts[activeContacts].src" class="avatar" 
                             alt="">          
                         </div>
                         <div class="col-6 align-self-center">
-                            <!-- <h5>{{item[activeContacts].name}}</h5> -->
+                            <h5>{{contacts[activeContacts].name}}</h5>
                             <span class="clr-grey">ultimo accesso oggi alle 12:00</span>
                         </div>
                         <div class="col-5 justify-self-end align-self-center">
@@ -121,7 +121,8 @@
                                     <i class="fa-solid icon fa-face-smile"></i>
                                 </div>
                                 <div class="col-9">
-                                    <input id="write-msg" type="text" placeholder="Scrivi un messaggio">
+                                    <input v-model="newMsg" id="write-msg" type="text" placeholder="Scrivi un messaggio"
+                                    @keyup.enter="newMessage">
                                 </div>
                                 <div class="col-1">
                                     <i class="fa-solid icon fa-microphone"></i>
