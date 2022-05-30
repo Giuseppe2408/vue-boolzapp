@@ -74,7 +74,7 @@
 
 /* messaggi */
 #messaggi {
-    height: calc(100% - 70px);
+    height: calc(100% - 116px);
     background-image: url('../img/sfondo.jpg');
     background-size: contain;
     overflow-y: scroll;
@@ -83,6 +83,7 @@
 .style-msg {
     padding: 20px;
     border-radius: 10px;
+    margin: 30px 0;
 }
 
 #write-msg {
@@ -97,4 +98,14 @@
 .time {
     color: grey;
     font-size: 14px;
+}
+
+.sent {
+    background-color: green;
+    align-self: flex-end;
+}
+
+.received {
+    background-color: white;
+    align-self: flex-start;
 }
