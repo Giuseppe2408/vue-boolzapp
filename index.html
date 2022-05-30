@@ -52,7 +52,12 @@
 
                     <!-- lista contatti -->
                     <div class="row" id="contatti">
-                        <div class="col-12" v-for="(item,i) in contacts" :key="i">
+                        <div class="col-12 cursor" 
+                        v-for="(item,i) in contacts" 
+                        :key="i"                        
+                        :class="i === activeContacts ? 'active' : ''"
+                        @click="switchContacts(i)">
+                        
                             <div class="row contatti">
                                 <div class="col-2">
                                     <img :src="item.src" class="avatar" 
@@ -88,16 +93,25 @@
                         </div>
                     </div>
                     <!-- messaggi -->
-                    <div class="row" id="messaggi">
+                    <div class="row pt-5" id="messaggi">
                         <div class="col-12">
                             <div class="row flex-column">
                                 <!-- messaggi inviati -->
-                                <div class="col-7 style-msg align-self-end m-2 bck-green">
-                                    <span>Hai portato a spasso il cane?</span>
+                                <div class="col-7 style-msg align-self-end m-2 bck-green dis-flex" v-for="(item, i) in contacts" v-for="(messaggio, i) in item.messages">
+                                    <span>{{messaggio.message}}</span>
+                                    <span class="time align-self-end">12:00</span>
                                 </div>
-                                <div class="col-7 style-msg m-2 align-self-end bck-green">Ricordati di stendere i panni</div>
+                                <!-- <div class="col-7 style-msg m-2 align-self-end bck-green dis-flex">
+                                    <span>Ricordati di stendere i panni</span>
+                                    <span class="time align-self-end">12:00</span>   
+                                </div> -->
+                                
                                 <!-- messaggi ricevuti -->
-                                <div class="col-7 style-msg m-2 align-self-start bck-white">Tutto fatto!</div>
+                                <!-- <div class="col-7 style-msg m-2 align-self-start bck-white dis-flex">
+                                    <span>Tutto fatto!</span>
+                                    <span class="time align-self-end">12:00</span>    
+                                </div> -->
+
                             </div>
                         </div>
                         <div class="col-12 align-self-end">

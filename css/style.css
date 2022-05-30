@@ -64,6 +64,14 @@
     
 }
 
+.cursor:hover {
+    cursor: pointer;
+}
+
+.active {
+    background-color: lightgrey;
+}
+
 /* messaggi */
 #messaggi {
     height: calc(100% - 70px);
@@ -79,4 +87,14 @@
 
 #write-msg {
     width: 100%;
+}
+
+.dis-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.time {
+    color: grey;
+    font-size: 14px;
 }

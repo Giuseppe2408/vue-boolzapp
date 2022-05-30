@@ -2,6 +2,7 @@ const myContacts = new Vue({
     el : '#app',
 
     data : {
+        activeContacts : 0,
         contacts : [
             {
                 name: 'Michele',
@@ -173,6 +174,11 @@ const myContacts = new Vue({
                 ],
             }
         ]
+    },
+    methods : {
+        switchContacts(activeContacts) {
+            this.activeContacts = activeContacts;
+        }
     }
 }); 
  
