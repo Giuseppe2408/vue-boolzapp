@@ -73,8 +73,13 @@
 }
 
 /* messaggi */
+#margin {
+    margin-left: 240px;
+}
+
+
 #messaggi {
-    height: calc(100% - 70px);
+    height: calc(90vh - 70px);
     background-image: url('../img/sfondo.jpg');
     background-size: contain;
     overflow-y: scroll;

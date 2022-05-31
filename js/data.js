@@ -6,77 +6,77 @@ const myContacts = new Vue({
         newMsg : '',
         contacts : [
             {
-                name: 'Michele',
+                name: 'Luffy',
                 avatar: '_1',
-                src: 'https://www.bonifica-auto.it/wp-content/uploads/2019/10/avatar-uomo.jpg',
+                src: 'img/luffy.jpg',
                 visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Hai portato a spasso il cane?',
+                        message: 'Ciao Luffy',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Ricordati di stendere i panni',
+                        message: 'Sei diventato il re dei pirati?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 16:15:22',
-                        message: 'Tutto fatto!',
+                        message: 'No mancano altri mille episodi',
                         status: 'received'
                     }
                 ],
             },
             {
-                name: 'Fabio',
+                name: 'Zoro',
                 avatar: '_2',
-                src: 'img/Fabio.jpg',
+                src: 'img/Roronoa_Zoro.png',
                 visible: true,
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
+                        message: 'Ti sei perso?',
                         status: 'sent'
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Stasera ci vediamo?',
+                        message: 'Si',
                         status: 'received'
                     },
                     {
                         date: '20/03/2020 16:35:00',
-                        message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                        message: 'Ti veniamo a prendere io e Luffy',
                         status: 'sent'
                     }
                 ],
             },
             {
-                name: 'Samuele',
+                name: 'Sanji',
                 avatar: '_3',
-                src: 'img/samuele.jpg',
+                src: 'img/sanji.jpg',
                 visible: true,
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
-                        message: 'La Marianna va in campagna',
+                        message: 'Andiamo da Nami',
                         status: 'received'
                     },
                     {
                         date: '28/03/2020 10:20:10',
-                        message: 'Sicuro di non aver sbagliato chat?',
+                        message: 'Non posso ora!',
                         status: 'sent'
                     },
                     {
                         date: '28/03/2020 16:15:22',
-                        message: 'Ah scusa!',
+                        message: 'Nami-chaaaaaaan',
                         status: 'received'
                     }
                 ],
             },
             {
-                name: 'Alessandro B.',
-                src: 'img/alessandro1.jpg',
+                name: 'Chopper',
+                src: 'img/chopper.jpg',
                 avatar: '_4',
                 visible: true,
                 messages: [
@@ -93,32 +93,32 @@ const myContacts = new Vue({
                 ],
             },
             {
-                name: 'Alessandro L.',
-                src: 'img/alessandro2.png',
+                name: 'Nami',
+                src: 'img/nami.jpg',
                 avatar: '_5',
                 visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Ricordati di chiamare la nonna',
+                        message: 'Ti cercava Sanji',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Va bene, stasera la sento',
+                        message: 'E che voleva?',
                         status: 'received'
                     }
                 ],
             },
             {
-                name: 'Claudia',
-                src: 'img/claudia.png',
+                name: 'Arpo',
+                src: 'img/arpo_.jpg',
                 avatar: '_6',
                 visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Ciao Claudia, hai novità?',
+                        message: 'Ciao Arpo, hai novità?',
                         status: 'sent'
                     },
                     {
@@ -134,7 +134,7 @@ const myContacts = new Vue({
                 ],
             },
             {
-                name: 'Federico',
+                name: 'Gigachad',
                 src: 'img/gigachad-1200x1200.jpg',
                 avatar: '_7',
                 visible: true,
@@ -188,16 +188,31 @@ const myContacts = new Vue({
 
         newMessage(){
             const newMsg = {
-                date : '30/05/2022 15:48',
+                date : '15:00',
                 message : this.newMsg,
                 status : 'sent',
             }
+            let thisContact = this.contacts[this.activeContacts];
             if (this.newMsg !== "") {                
-                this.contacts[this.activeContacts].messages.push(newMsg);
+                thisContact.messages.push(newMsg);
                 this.newMsg = "";
-            }      
+            }       
+            
+            setTimeout(() => {
+                const okMsg = {
+                    date : '15:01',
+                    message : 'ok',
+                    status : 'received',
+                }
+                thisContact.messages.push(okMsg)
+            }, 1000)
+        },
+
+        searchContact(){
             
         }
+
+        
     }
 }); 
  
