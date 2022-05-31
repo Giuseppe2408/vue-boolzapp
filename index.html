@@ -47,7 +47,7 @@
                         <button class="col-3" @click="searchContact" >
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <input v-model="cercaContatto"   type="text" class="col-9"placeholder="Cerca o inizia una nuova chat">
+                        <input v-model="cercaContatto" @keyup.enter="searchContact"   type="text" class="col-9"placeholder="Cerca o inizia una nuova chat">
                     </div>
 
                     <!-- lista contatti -->

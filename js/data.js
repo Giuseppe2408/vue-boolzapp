@@ -218,9 +218,10 @@ const myContacts = new Vue({
         },
 
         searchContact(){
-            this.contacts.forEach((contact, i) => {
-                if (contact.name.toLowerCase().search(this.cercaContatto.toLowerCase()) == -1) {
-                    contact.visible = false;
+            this.contacts.forEach((contatto, i) => {
+                if (contatto.name.toLowerCase().search(this.cercaContatto.toLowerCase()) == -1) {
+                    contatto.visible = false;
+                    
                 }
             });
         }
