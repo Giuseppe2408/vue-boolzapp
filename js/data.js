@@ -3,6 +3,7 @@ const myContacts = new Vue({
 
     data : {
         activeContacts : 0,
+        cercaContatto : '',
         newMsg : '',
         contacts : [
             {
@@ -146,7 +147,7 @@ const myContacts = new Vue({
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                        message: 'Grazie per avermelo ricordato, li farò subito!',
                         status: 'received'
                     }
                 ],
@@ -184,11 +185,19 @@ const myContacts = new Vue({
             console.log(activeContacts);
         },
 
+        dataAttuale(){
+            const now = new Date();
+            let data = now.toLocaleDateString();
+            return data;
+        },
+
+        
         
 
         newMessage(){
+
             const newMsg = {
-                date : '15:00',
+                date : this.dataAttuale(),
                 message : this.newMsg,
                 status : 'sent',
             }
@@ -200,7 +209,7 @@ const myContacts = new Vue({
             
             setTimeout(() => {
                 const okMsg = {
-                    date : '15:01',
+                    date : this.dataAttuale(),
                     message : 'ok',
                     status : 'received',
                 }
@@ -209,7 +218,11 @@ const myContacts = new Vue({
         },
 
         searchContact(){
-            
+            this.contacts.forEach((contact, i) => {
+                if (contact.name.toLowerCase().search(this.cercaContatto.toLowerCase()) == -1) {
+                    contact.visible = false;
+                }
+            });
         }
 
         

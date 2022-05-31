@@ -44,16 +44,17 @@
 
                     <!-- input ricerca messaggio -->
                     <div class="row">
-                        <button class="col-3">
+                        <button class="col-3" @click="searchContact" >
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <input type="text" class="col-9" placeholder="Cerca o inizia una nuova chat">
+                        <input v-model="cercaContatto"   type="text" class="col-9"placeholder="Cerca o inizia una nuova chat">
                     </div>
 
                     <!-- lista contatti -->
                     <div class="row" id="contatti">
                         <div class="col-12 cursor" 
                         v-for="(item,i) in contacts" 
+                        v-if="item.visible == true"
                         :key="i"                        
                         :class="i === activeContacts ? 'active' : ''"
                         @click="switchContacts(i)">
